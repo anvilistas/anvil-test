@@ -10,6 +10,10 @@ Installation
 
     pip install anvil_test
 
+
+You will also need the relevant webdrivers for the browsers you wish to use.
+See the `Selenium docs <http://selenium-python.readthedocs.io/installation.html>`_ for further info.
+
 Usage
 -----
 The library contains a module of functions which you can import to use within
