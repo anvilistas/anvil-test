@@ -19,7 +19,7 @@ Usage
 The library contains a module of functions which you can import to use within
 your testing suite.
 
-Example code using pytest to login to an anvil and run a trivial (failing)
+Example code using pytest to login to an anvil app and run a trivial (failing)
 test:
 
 .. code-block::
