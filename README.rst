@@ -2,7 +2,7 @@ Anvil Test Library
 ==================
 
 A library to facilitate automated testing of `Anvil <https://anvil.works>`_
-applications.
+applications based on `Selenium <https://www.seleniumhq.org/>`_.
 
 Installation
 ------------
