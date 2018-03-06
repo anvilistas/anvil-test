@@ -147,10 +147,10 @@ def login(email, password):
 
 
 def signup(email, password):
-    signup_xpath = '/html/body/div[4]/div/div/div[2]/div/ul/li[7]/a'
+    main_xpath = '/html/body/div[4]/div/div'
+    signup_xpath = f'{main_xpath}/div[2]/div/ul/li[7]/a'
     click(signup_xpath, delay=1)
 
-    main_xpath = '/html/body/div[4]/div/div'
     email_xpath = f'{main_xpath}/div[2]/div/ul/li[2]/input'
     password_1_xpath = f'{main_xpath}/div[2]/div/ul/li[4]/input'
     password_2_xpath = f'{main_xpath}/div[2]/div/ul/li[6]/input'
