@@ -139,3 +139,19 @@ def login(email, password):
     send_keys(email_xpath, email)
     send_keys(password_xpath, password)
     click(login_xpath)
+
+
+def sign_up(email, password):
+    signup_xpath = '/html/body/div[4]/div/div/div[2]/div/ul/li[7]/a'
+    click(signup_xpath)
+
+    main_xpath = '/html/body/div[4]/div/div'
+    email_xpath = f'{main_xpath}/div[2]/div/ul/li[2]/input'
+    password_1_xpath = f'{main_xpath}/div[2]/div/ul/li[4]/input'
+    password_2_xpath = f'{main_xpath}/div[2]/div/ul/li[6]/input'
+    signup_xpath = f'{main_xpath}/div[3]/button[1]'
+
+    send_keys(email_xpath, email)
+    send_keys(password_1_xpath, password)
+    send_keys(password_2_xpath, password)
+    click(signup_xpath)
