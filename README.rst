@@ -19,8 +19,8 @@ Usage
 The library contains a module of functions which you can import to use within
 your testing suite.
 
-Example code using pytest to login to an anvil app and run a trivial (failing)
-test:
+Example code using pytest to login to an anvil app, run a trivial (failing)
+test and close down the browser session at the end:
 
 .. code-block::
 
