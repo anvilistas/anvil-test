@@ -2,7 +2,7 @@ from setuptools import find_packages, setup
 
 setup(
     name='Anvil Test',
-    version='0.0.1',
+    version='0.0.2',
     author='Owen Campbell',
     packages=find_packages('src'),
     package_dir={'': 'src'},
