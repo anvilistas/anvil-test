@@ -28,7 +28,7 @@ def init(browser, url, wait=10, maximize=True, language=None):
     url : str
         the initial url which the browser should open
     wait : int
-        default wait time in milliseconds
+        default wait time in seconds
     maximize : bool
         whether the browser window should be maximized
     language : str
@@ -54,18 +54,23 @@ def _select_by(select_by=None):
         return getattr(By, select_by.upper())
 
 
-def click(locator, select_by=None):
+def click(locator, delay=None, select_by=None):
     """Click the specified element
 
     Parameters
     ----------
     locator : str
         xpath, class name or id
+    delay : int
+        time in seconds to wait after clicking
     select_by : str
         representing a valid selenium By selector (e.g. 'id').
     """
     select_by = _select_by(select_by)
     self.wait.until(ec.element_to_be_clickable((select_by, locator))).click()
+
+    if delay is not None:
+        time.sleep(delay)
 
 
 def send_keys(
@@ -82,9 +87,9 @@ def send_keys(
     clear : bool
         whether to clear the element before sending keys
     pause : int
-        time in milliseconds to pause between clearing and sending keys
+        time in seconds to pause between clearing and sending keys
     delay : int
-        time in milliseconds to wait after sending all keys
+        time in seconds to wait after sending all keys
     select_by : str
         representing a valid selenium By selector (e.g. 'id').
     """
@@ -143,7 +148,7 @@ def login(email, password):
 
 def signup(email, password):
     signup_xpath = '/html/body/div[4]/div/div/div[2]/div/ul/li[7]/a'
-    click(signup_xpath)
+    click(signup_xpath, delay=1)
 
     main_xpath = '/html/body/div[4]/div/div'
     email_xpath = f'{main_xpath}/div[2]/div/ul/li[2]/input'
