@@ -38,6 +38,8 @@ test:
     def test_session():
         session.init(browser, url)
         session.login(email, password)
+        yield
+        session.browser.quit()
 
 
     def test_login(test_session):
