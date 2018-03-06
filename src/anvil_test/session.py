@@ -141,7 +141,7 @@ def login(email, password):
     click(login_xpath)
 
 
-def sign_up(email, password):
+def signup(email, password):
     signup_xpath = '/html/body/div[4]/div/div/div[2]/div/ul/li[7]/a'
     click(signup_xpath)
 
