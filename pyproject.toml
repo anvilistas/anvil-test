@@ -1,0 +1,15 @@
+[build-system]
+requires = ["flit_core >=2,<4"]
+build-backend = "flit_core.buildapi"
+
+[tool.flit.metadata]
+module = "anvil_test"
+author = "The Anvil Test project team members listed at https://github.com/anvilistas/anvil-test/graphs/contributors"
+home-page = "https://github.com/anvilistas/anvil-test"
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Natural Language :: English",
+]
+description-file = "README.rst"
+requires-python = ">=3.6"
+requires = ["attrs", "selenium"]
