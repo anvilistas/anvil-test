@@ -1,3 +1,10 @@
+# SPDX-License-Identifier: MIT
+#
+# Copyright (c) 2021 The Anvil Test project team members listed at
+# https://github.com/anvilistas/anvil-test/graphs/contributors
+#
+# This software is published at https://github.com/anvilistas/anvil-test
+
 import sys
 import time
 
